@@ -176,11 +176,11 @@ def pagarFacturas(usuario):
                 usuario["Saldo"] -= factura["Valor"]
                 usuario["FacturasAdeudadas"].pop(opcion - 1)
                 print(f"\n Se pagó la factura de {factura['Servicio']} por ${factura['Valor']}.")
-                print(f"💰 Nuevo saldo: ${usuario['Saldo']}")
+                print(f"Nuevo saldo: ${usuario['Saldo']}")
             else:
                 print("\n No tienes suficiente saldo para pagar esta factura.")
         else:
-            print("\n❌ Opción inválida.")
+            print("\n Opción inválida.")
     except ValueError:
         print("\n Debes ingresar un número válido.")
 # LAS FACTURAS SOLO SE PAGAN SI TIENES SALDO SUFICIENTE
